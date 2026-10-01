@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-smoke-incidents",
+  "dataset_version": "1.0.0",
+  "privacy_review": {
+    "status": "approved",
+    "reviewed_on": "2026-09-30",
+    "redaction_method": "Synthetic examples authored for evaluator smoke testing; checked to contain no production log content."
+  },
+  "labeling_guidelines": "Each authored example has one intentionally obvious category; unknown means none of the analyzer's category terms are present.",
+  "incidents": [
+    {
+      "id": "synthetic-database-001",
+      "expected_category": "database",
+      "logs": [
+        {
+          "timestamp": "2026-09-01T10:00:00Z",
+          "source": "api",
+          "level": "ERROR",
+          "message": "Database query deadlock while reading invoices"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-database-002",
+      "expected_category": "database",
+      "logs": [
+        {
+          "timestamp": "2026-09-02T10:00:00Z",
+          "source": "worker",
+          "level": "ERROR",
+          "message": "SQL transaction failed because the connection pool is exhausted"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-network-001",
+      "expected_category": "network",
+      "logs": [
+        {
+          "timestamp": "2026-09-03T10:00:00Z",
+          "source": "resolver",
+          "level": "ERROR",
+          "message": "DNS resolver returned SERVFAIL during deployment"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-network-002",
+      "expected_category": "network",
+      "logs": [
+        {
+          "timestamp": "2026-09-04T10:00:00Z",
+          "source": "gateway",
+          "level": "ERROR",
+          "message": "Packet loss on network path caused socket failure"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-memory-001",
+      "expected_category": "memory",
+      "logs": [
+        {
+          "timestamp": "2026-09-05T10:00:00Z",
+          "source": "worker",
+          "level": "ERROR",
+          "message": "Out of memory; heap usage reached its limit"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-memory-002",
+      "expected_category": "memory",
+      "logs": [
+        {
+          "timestamp": "2026-09-06T10:00:00Z",
+          "source": "runtime",
+          "level": "ERROR",
+          "message": "GC pressure followed by memory allocation failure"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-cpu-001",
+      "expected_category": "cpu",
+      "logs": [
+        {
+          "timestamp": "2026-09-07T10:00:00Z",
+          "source": "worker",
+          "level": "ERROR",
+          "message": "CPU utilization high under a runaway thread loop"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-cpu-002",
+      "expected_category": "cpu",
+      "logs": [
+        {
+          "timestamp": "2026-09-08T10:00:00Z",
+          "source": "scheduler",
+          "level": "ERROR",
+          "message": "Processor saturation caused by an infinite loop"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-disk-001",
+      "expected_category": "disk",
+      "logs": [
+        {
+          "timestamp": "2026-09-09T10:00:00Z",
+          "source": "storage",
+          "level": "ERROR",
+          "message": "No space left on device while writing data"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-disk-002",
+      "expected_category": "disk",
+      "logs": [
+        {
+          "timestamp": "2026-09-10T10:00:00Z",
+          "source": "storage",
+          "level": "ERROR",
+          "message": "Disk I/O failure because the storage volume is full"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-authentication-001",
+      "expected_category": "authentication",
+      "logs": [
+        {
+          "timestamp": "2026-09-11T10:00:00Z",
+          "source": "identity",
+          "level": "ERROR",
+          "message": "401 unauthorized response after token expiry"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-authentication-002",
+      "expected_category": "authentication",
+      "logs": [
+        {
+          "timestamp": "2026-09-12T10:00:00Z",
+          "source": "identity",
+          "level": "ERROR",
+          "message": "Authentication failed because credentials are invalid"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-unknown-001",
+      "expected_category": "unknown",
+      "logs": [
+        {
+          "timestamp": "2026-09-13T10:00:00Z",
+          "source": "service",
+          "level": "ERROR",
+          "message": "Service returned an unexpected failure code"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-unknown-002",
+      "expected_category": "unknown",
+      "logs": [
+        {
+          "timestamp": "2026-09-14T10:00:00Z",
+          "source": "worker",
+          "level": "ERROR",
+          "message": "Worker failed with an unspecified condition"
+        }
+      ]
+    }
+  ]
+}
