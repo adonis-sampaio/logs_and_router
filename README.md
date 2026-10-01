@@ -13,7 +13,6 @@ This project is designed for a practical scenario: most production incidents are
 - Results include per-category metrics and bootstrap confidence intervals
 - The KNN router now behaves as a measured backend selector, not as a direct causal-model oracle
 
-> Status: this remains a prototype and should be presented as a credible engineering artifact, not a validated production diagnostic system.
 
 ## Project goal
 
@@ -248,9 +247,6 @@ python3 -m pytest -q
 - uncertainty should be stated honestly
 - the system should support human review, not replace it
 
-## Important limitation
-
-This project is a strong portfolio and prototype system, but it is not yet a production-validated diagnostic engine. It is best described as a reproducible, inspectable, cost-aware incident triage experiment with a clear pathway to stronger evaluation and more robust modeling.
 
 ## Recommended next steps
 
